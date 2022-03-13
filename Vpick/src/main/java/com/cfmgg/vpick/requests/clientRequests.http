@@ -1,0 +1,6 @@
+### Request get client by id
+GET http://localhost:9000/vpick/v0/clients/get/id/1
+### Request get client by carteBancaire
+GET http://localhost:9000/vpick/v0/clients/get/cb/1234%202345%202345%208793
+
+<> 2022-03-12T181626.200.json

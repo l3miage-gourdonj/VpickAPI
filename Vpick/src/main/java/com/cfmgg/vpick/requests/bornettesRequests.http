@@ -1,0 +1,5 @@
+### Request get client by id
+GET http://localhost:9000/vpick/v0/bornettes/get/etat/HS
+
+### Request get client by id
+GET http://localhost:9000/vpick/v0/bornettes/get/id/4
