@@ -11,13 +11,14 @@ import java.util.List;
 
 @Repository
 public interface StationRepository extends JpaRepository<Station, Long>{
-    @Query("select s from Station s where s.id = :id")
-    Station findStationById(@Param("id") Long id);
+//On ne considere que les bornettes 'OK'
+    @Query("select s from Station s")
+    List<Station> findStationByStatusWithAvailableBike(StatusStation statusStation);
 
+    List<Station> findStationByStatusWithFreeBornette(StatusStation statusStation);
 
-    @Query("select s from Station s where s.adresse like '%:adresse%'")
-    List<Station> findStationByAdresse(@Param("adresse") String adresse);
+    List<Station> findStationWithAvailableBike(StatusStation statusStation);
 
-    @Query("select s from Station s where s.status = :statusStation ")
-    List<Station> findStationByStatus(@Param("statusStation") StatusStation statusStation);
+    List<Station> findStationWithFreeBornette(StatusStation statusStation);
+
 }

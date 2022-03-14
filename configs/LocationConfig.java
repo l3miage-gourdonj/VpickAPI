@@ -20,7 +20,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Configuration
-public class LocationConfig {
+public class LocationConfig {/*
     @Bean
     CommandLineRunner commandLineRunnerLocation(LocationRepository locationRepository,
                                                 VeloRepository veloRepository,
@@ -90,8 +90,8 @@ public class LocationConfig {
                 locationRepository.save(new Location(veloLouee, c, debut, dateFin, codeSecret));
             }
 
-        };
-    }
+        };*/
+
 
     private Date randomDate(LocalDate start, LocalDate end){
         LocalDate random = between(start, end);

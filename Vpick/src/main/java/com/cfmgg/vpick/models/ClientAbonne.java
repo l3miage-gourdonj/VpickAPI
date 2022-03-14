@@ -12,23 +12,30 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Entity
-@DiscriminatorValue("CA")
+@DiscriminatorValue("yes")
 public class ClientAbonne extends Client{
+
     private String nom;
+
     private String prenom;
+
     @Column(name = "date_naissance")
     private Date dateNaissance;
+
     private String adresse;
+
     private Sexe sexe;
-    @Column(
-            name = "code_secret",
-            unique = true)
+    @Column(name = "code_secret", unique = true)
     private String codeSecret;
+
     @Column(name = "credit_temps")
     private int creditTemps;
+
     @Column(name = "date_debut_abonnement")
     private Date dateDebutAbonnement;
+
     @Column(name = "date_fin_abonnement")
     private Date dateFinAbonnement;
 

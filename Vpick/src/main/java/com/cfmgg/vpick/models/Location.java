@@ -14,13 +14,15 @@ import java.util.List;
 public class Location {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
-    @ManyToMany
+
+    @OneToMany
     private List<Velo> velos;
 
-    @OneToOne
+    @ManyToOne
     private Client client;
+
     @Column(name = "date_debut")
     private Date dateDebut;
     @Column(name = "date_fin")

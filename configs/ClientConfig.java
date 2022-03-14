@@ -13,14 +13,12 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 @Configuration
-public class ClientConfig {
+public class ClientConfig {/*
     @Bean
     CommandLineRunner commandLineRunnerClient(ClientRepository clientRepository) {
         return args -> {
 
-            /*
-             * Créations de nos clients
-             */
+
             //Créations des clients normales
             Client maria = new Client("1234 2345 2345 8793");
             Client robert = new Client("1234 2345 2345 8793");
@@ -53,5 +51,5 @@ public class ClientConfig {
             clientRepository.saveAll(List.of(claude, yves, georges, robert, maria));
             System.out.println("End of ClientConfig file");
         };
-    }
+    }*/
 }

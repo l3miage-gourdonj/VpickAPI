@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-public class BornetteConfig {
+public class BornetteConfig {/*
     @Bean
     @DependsOn("beanStation")
     CommandLineRunner commandLineRunnerBornette(BornetteRepository bornetteRepository,StationRepository stationRepository) {
@@ -41,4 +41,5 @@ public class BornetteConfig {
             System.out.println("Taille bornettes : "+ bornetteRepository.findAll().size());
         };
     }
+    */
 }

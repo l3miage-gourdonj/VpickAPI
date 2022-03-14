@@ -1,9 +1,6 @@
 package com.cfmgg.vpick.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -15,7 +12,7 @@ import javax.persistence.*;
 public class Modele {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
     @Column(unique = true)
     private String modele;

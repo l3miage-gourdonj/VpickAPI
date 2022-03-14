@@ -8,21 +8,26 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "bornette")
 public class Bornette {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
+
     private Etat etat;
 
     @OneToOne
+    private Velo velo;
+
+    @ManyToOne
     private Station station;
 
-    public Bornette(Etat etat, Station station){
+    public Bornette(Etat etat, Velo velo){
         this.etat = etat;
-        this.station = station;
+        this.velo = velo;
     }
 
 }

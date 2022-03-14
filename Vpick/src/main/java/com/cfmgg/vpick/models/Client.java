@@ -1,25 +1,23 @@
 package com.cfmgg.vpick.models;
 
 import lombok.*;
+import java.util.List;
 
 import javax.persistence.*;
 
-
 @NoArgsConstructor
-@Getter
-@Setter
+@Inheritance( strategy = InheritanceType.JOINED )
 @Entity
-@Inheritance( strategy = InheritanceType.SINGLE_TABLE)
-@Table(name = "client")
-public class Client {
+@DiscriminatorColumn(name = "abonne")
+public abstract class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
-    @Column(name = "carte_bancaire",
-    nullable = false)
+
+    @Column(name = "carte_bancaire", nullable = false)
     private String carteBancaire;
 
-    public Client( String carteBancaire) {
+    public Client(String carteBancaire) {
         this.carteBancaire = carteBancaire;
     }
 }
