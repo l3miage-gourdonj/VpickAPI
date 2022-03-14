@@ -29,7 +29,4 @@ public interface BornetteRepository extends JpaRepository<Bornette, Long> {
     @Query("select v from Velo v where v.bornette = :bornetteId")
     Velo findVeloFromBornetteId(@Param("bornetteId")Long bornetteId);
 
-    @Query("select b from Bornette b ")
-    List<Bornette> findAllBornettes();
-
 }

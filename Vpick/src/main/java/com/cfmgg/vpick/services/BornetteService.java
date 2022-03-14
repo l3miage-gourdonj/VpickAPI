@@ -13,7 +13,8 @@ import java.util.List;
 public record BornetteService(BornetteRepository bornetteRepository) {
 
     @Autowired
-    public BornetteService {
+    public BornetteService (BornetteRepository bornetteRepository){
+        this.bornetteRepository = bornetteRepository;
     }
 
     public Bornette findBornetteById(Long id) {

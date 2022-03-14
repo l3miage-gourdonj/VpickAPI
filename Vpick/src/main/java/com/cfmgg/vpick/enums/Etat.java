@@ -1,6 +1,12 @@
 package com.cfmgg.vpick.enums;
 
 public enum Etat {
-    OK,
-    HS
+    OK("ok"),
+    HS("hs");
+
+    private String nom;
+
+    Etat(String nom) {
+        this.nom = nom;
+    }
 }

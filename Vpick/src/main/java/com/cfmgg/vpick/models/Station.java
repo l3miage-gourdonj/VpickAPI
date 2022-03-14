@@ -4,16 +4,18 @@ import com.cfmgg.vpick.enums.StatusStation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
-@Table(name = "station",
-        uniqueConstraints={@UniqueConstraint(name = "station_adresse_unique", columnNames = "adresse")}
-)
+@Table(name = "station", uniqueConstraints = {
+        @UniqueConstraint(name = "station_adresse_unique", columnNames = {"adresse"})
+})
 public class Station {
 
     @Id
@@ -22,11 +24,9 @@ public class Station {
 
     @Column(name = "adresse",  nullable = false,length = 30)
     private String adresse;
-    private StatusStation status;
 
-    public Station(String adresse, StatusStation status){
+    public Station(String adresse){
         this.adresse = adresse;
-        this.status = status;
     }
 
 }
