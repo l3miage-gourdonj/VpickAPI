@@ -1,9 +1,8 @@
 package com.cfmgg.vpick.configs;
 
 import com.cfmgg.vpick.enums.Sexe;
-import com.cfmgg.vpick.models.Client;
 import com.cfmgg.vpick.models.ClientAbonne;
-import com.cfmgg.vpick.repository.ClientRepository;
+import com.cfmgg.vpick.repositories.ClientAboRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,17 +12,10 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 @Configuration
-public class ClientConfig {/*
+public class ClientAboConfig {
     @Bean
-    CommandLineRunner commandLineRunnerClient(ClientRepository clientRepository) {
+    CommandLineRunner commandLineRunnerClientAbo(ClientAboRepository clientAboRepository) {
         return args -> {
-
-
-            //Créations des clients normales
-            Client maria = new Client("1234 2345 2345 8793");
-            Client robert = new Client("1234 2345 2345 8793");
-            Client claude = new Client("9876 5432 1098 7654");
-
             //Créations de clients abonnés
             ClientAbonne georges = new ClientAbonne("1234 2345 2345 8793",
                     "Beaux-Art",
@@ -36,7 +28,7 @@ public class ClientConfig {/*
                     new GregorianCalendar(2022, Calendar.DECEMBER, 2).getTime(),
                     new GregorianCalendar(2023, Calendar.DECEMBER, 2).getTime()
             );
-            Client yves = new ClientAbonne("1234 2345 2345 8793",
+            ClientAbonne yves = new ClientAbonne("1234 2345 2345 8793",
                     "LaForet",
                     "Yves",
                     new GregorianCalendar(1982, Calendar.FEBRUARY, 11).getTime(),
@@ -48,8 +40,8 @@ public class ClientConfig {/*
                     new GregorianCalendar(2019, Calendar.APRIL, 11).getTime()
             );
             System.out.println("Enregistrement de nos clients.");
-            clientRepository.saveAll(List.of(claude, yves, georges, robert, maria));
+            clientAboRepository.saveAll(List.of(yves, georges));
             System.out.println("End of ClientConfig file");
         };
-    }*/
+    }
 }

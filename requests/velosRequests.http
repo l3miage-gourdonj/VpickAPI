@@ -1,2 +1,0 @@
-### Request get client by id
-GET http://localhost:9000/vpick/v0/velos/get/etat/HS
