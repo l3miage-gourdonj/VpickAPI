@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("no")
 public class ClientNonAbonne extends Client {
+
     public ClientNonAbonne(String carteBancaire){
         super(carteBancaire);
     }
