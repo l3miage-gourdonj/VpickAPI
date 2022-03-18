@@ -20,17 +20,14 @@ public class Station {
     @Column(name = "adresse", nullable = false, length = 30, unique = true)
     private String adresse;
 
-    private StatusStation status;
-
     @OneToMany
     private List<Bornette> bornettes;
 
     @OneToMany
     private List<PlageHoraire> plagesHoraires;
 
-    public Station(String adresse, StatusStation status){
+    public Station(String adresse){
         this.adresse = adresse;
-        this.status = status;
     }
 
 }

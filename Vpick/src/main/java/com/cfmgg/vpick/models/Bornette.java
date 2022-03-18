@@ -16,7 +16,7 @@ public class Bornette {
     @Id
     @GeneratedValue
     private Long id;
-
+    private int numero;
     private Etat etat;
 
     @OneToOne
@@ -25,7 +25,8 @@ public class Bornette {
     @ManyToOne
     private Station station;
 
-    public Bornette(Etat etat, Velo velo){
+    public Bornette(int numero,Etat etat, Velo velo){
+        this.numero = numero;
         this.etat = etat;
         this.velo = velo;
     }

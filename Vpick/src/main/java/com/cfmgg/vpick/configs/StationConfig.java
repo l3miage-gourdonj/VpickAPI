@@ -15,13 +15,13 @@ public class StationConfig {
     @Bean
     CommandLineRunner commandLineRunnerStation(StationRepository stationRepository) {
         return args -> {
-            Station notreDameMusee = new Station("Notre Dame Musée", StatusStation.VNUL);
-            Station victorHugo = new Station("Victor Hugo", StatusStation.VNUL);
-            Station gabrielFaure = new Station("Gabriel Fauré", StatusStation.VNUL);
-            Station ileVerte = new Station("Ile Verte", StatusStation.VNUL);
-            Station laTronche = new Station("La Tronche", StatusStation.VNUL);
-            Station saintClaire = new Station("Saint Claire Les Halles", StatusStation.VNUL);
-            Station bibliothequeUniv = new Station("Bibliotheque Universitaire", StatusStation.VNUL);
+            Station notreDameMusee = new Station("Notre Dame Musée");
+            Station victorHugo = new Station("Victor Hugo");
+            Station gabrielFaure = new Station("Gabriel Fauré");
+            Station ileVerte = new Station("Ile Verte");
+            Station laTronche = new Station("La Tronche");
+            Station saintClaire = new Station("Saint Claire Les Halles");
+            Station bibliothequeUniv = new Station("Bibliotheque Universitaire");
 
 
             stationRepository.saveAll(List.of(notreDameMusee, victorHugo, gabrielFaure, ileVerte, laTronche, saintClaire, bibliothequeUniv));
