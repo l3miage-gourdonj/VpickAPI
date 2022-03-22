@@ -31,4 +31,9 @@ public class PlageHoraire {
     private Date heureFin;
 
 
+    public PlageHoraire(StatusStation statusCourant, Date heureDebut, Date heureFin) {
+        this.statusCourant = statusCourant;
+        this.heureDebut = heureDebut;
+        this.heureFin = heureFin;
+    }
 }

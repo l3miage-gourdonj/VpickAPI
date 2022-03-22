@@ -3,10 +3,7 @@ package com.cfmgg.vpick.Controllers;
 import com.cfmgg.vpick.models.Station;
 import com.cfmgg.vpick.services.StationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,12 @@ public class StationController {
     @GetMapping
     public List<Station> getAllStations(){
         return stationService.getAllStations();
+    }
+
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(value="/nb/{nbLocations}",method = RequestMethod.GET)
+    public List<Station> getStationsLibres(@PathVariable("nbLocations") int nbLocations){
+        return stationService.getStationsLibres(nbLocations);
     }
 }

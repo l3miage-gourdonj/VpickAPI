@@ -20,7 +20,7 @@ public class Station {
     @Column(name = "adresse", nullable = false, length = 30, unique = true)
     private String adresse;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Bornette> bornettes;
 
     @OneToMany
@@ -28,6 +28,11 @@ public class Station {
 
     public Station(String adresse){
         this.adresse = adresse;
+    }
+
+    public Station(String adresse, List<Bornette> bornettes){
+        this.adresse = adresse;
+        this.bornettes = bornettes;
     }
 
 }

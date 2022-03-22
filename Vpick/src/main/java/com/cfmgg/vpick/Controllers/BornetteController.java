@@ -19,9 +19,9 @@ public class BornetteController {
     }
 
 
-    @CrossOrigin(origins = "http://localhost:4200/bringBack")
+    /*@CrossOrigin(origins = "http://localhost:4200/bringBack")
     @RequestMapping(value="/id={id}")
     public List<Bornette> getFreeBornette(@PathVariable("id") Long id){
         return bornetteService.getFreeBornette(id);
-    }
+    }*/
 }

@@ -17,7 +17,7 @@ public class BornetteService {
         this.bornetteRepository = bornetteRepository;
     }
 
-    public List<Bornette> getFreeBornette(Long id){
+    /*public List<Bornette> getFreeBornette(Long id){
         return bornetteRepository.getFreeBornette(id);
-    }
+    }*/
 }

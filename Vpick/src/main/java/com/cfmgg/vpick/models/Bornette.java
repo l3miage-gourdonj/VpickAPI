@@ -22,8 +22,6 @@ public class Bornette {
     @OneToOne
     private Velo velo;
 
-    @ManyToOne
-    private Station station;
 
     public Bornette(int numero,Etat etat, Velo velo){
         this.numero = numero;
