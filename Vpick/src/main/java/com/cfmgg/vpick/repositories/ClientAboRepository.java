@@ -1,15 +1,18 @@
 package com.cfmgg.vpick.repositories;
 
 import com.cfmgg.vpick.models.Client;
+import com.cfmgg.vpick.models.ClientAbonne;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClientAboRepository extends JpaRepository<Client, Long> {
+public interface ClientAboRepository extends JpaRepository<ClientAbonne, Long> {
 
     @Query("select ca from ClientAbonne ca where ca.codeSecret = :codeSecret and ca.carteBancaire Like :carteBancaire")
-    Client isSubscriber(@Param("codeSecret") String codeSecret, @Param("carteBancaire") String carteBancaire);
+    ClientAbonne isSubscriber(@Param("codeSecret") String codeSecret, @Param("carteBancaire") String carteBancaire);
     //
+
+    boolean existsBycodeSecret(String codeSecret);
 }

@@ -22,8 +22,8 @@ public class ClientAboController {
         this.clientAboService = clientAboService;
     }
     @CrossOrigin(origins = "http://localhost:4200")
-    @RequestMapping(value = "cb/{carteBancaire}/code/{codeSecret}", method = RequestMethod.GET)
-    public Client isSubscriber(@PathVariable("codeSecret") String codeSecret, @PathVariable("carteBancaire") String carteBancaire){
+    @RequestMapping(value = "/cb/{carteBancaire}/code/{codeSecret}", method = RequestMethod.GET)
+    public ClientAbonne isSubscriber(@PathVariable("codeSecret") String codeSecret, @PathVariable("carteBancaire") String carteBancaire){
         return clientAboService.isSubscriber(codeSecret,carteBancaire);
     }
 
