@@ -1,11 +1,8 @@
 package com.cfmgg.vpick.configs;
 
 import com.cfmgg.vpick.enums.Etat;
-import com.cfmgg.vpick.enums.StatusStation;
 import com.cfmgg.vpick.models.Bornette;
-import com.cfmgg.vpick.models.PlageHoraire;
 import com.cfmgg.vpick.models.Station;
-import com.cfmgg.vpick.repositories.ClientAboRepository;
 import com.cfmgg.vpick.repositories.StationRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

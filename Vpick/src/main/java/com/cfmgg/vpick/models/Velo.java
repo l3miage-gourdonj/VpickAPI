@@ -25,7 +25,7 @@ public class Velo {
     @ManyToOne
     private Modele modele;
 
-    public Velo(Date dateMiseEnService, Etat etat, StatusVelo status, Modele modele, Bornette bornette){
+    public Velo(Date dateMiseEnService, Etat etat, StatusVelo status, Modele modele){
         this.dateMiseEnService = dateMiseEnService;
         this.etat = etat;
         this.status = status;
