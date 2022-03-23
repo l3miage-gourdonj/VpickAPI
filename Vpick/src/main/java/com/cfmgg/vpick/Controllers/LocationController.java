@@ -5,6 +5,8 @@ import com.cfmgg.vpick.services.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value="/api/vpick/location")
 public class LocationController {
@@ -26,6 +28,12 @@ public class LocationController {
     @RequestMapping(value="/code/{codeSecret}",method = RequestMethod.GET)
     public Location getLocationNonAbo(@PathVariable("codeSecret") String codeSecret){
         return locationService.getLocationNonAbo(codeSecret);
+    }
+
+    @CrossOrigin(value = "http://localhost:4200/")
+    @RequestMapping(value="/cb/{cb}/code/{code}",method = RequestMethod.GET)
+    public List<Location>  getLocationAbo(@PathVariable("code") String codeSecret,@PathVariable("cb")String cb){
+        return locationService.getLocationAbo(codeSecret,cb);
     }
 
 }

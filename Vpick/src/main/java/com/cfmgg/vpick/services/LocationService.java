@@ -79,4 +79,8 @@ public class LocationService {
     public Location getLocationNonAbo(String codeSecret) {
         return locationRepository.getLocationNonAboByCodeSecret(codeSecret);
     }
+
+    public List<Location> getLocationAbo(String codeSecret,String cb) {
+        return locationRepository.getLocationAbo(codeSecret,cb);
+    }
 }
