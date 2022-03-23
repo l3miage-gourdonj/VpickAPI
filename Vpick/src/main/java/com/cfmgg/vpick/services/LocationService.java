@@ -53,6 +53,7 @@ public class LocationService {
         }
         if(codeSecret!=null && cb != null){
             client = clientAboRepository.isSubscriber(codeSecret,cb);
+            codeLocation = codeSecret;
         }else{
             codeSecret = ""+(int) ((Math.random() * (99999 - 10000)) + 10000);
             while(locationRepository.existsBycodeSecretAndDateFinIsNullAndClientIsNull(codeSecret)){
