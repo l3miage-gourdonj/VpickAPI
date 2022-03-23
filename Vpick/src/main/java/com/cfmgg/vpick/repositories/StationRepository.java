@@ -12,11 +12,11 @@ import java.util.List;
 public interface StationRepository extends JpaRepository<Station, Long> {
 
     @Query(value =
-            " select * from station where id IN" +
-            " (select station_id from station_bornettes natural join bornette" +
-            " where velo_id is null and etat = 0" +
-            " Group by station_id" +
-            " Having count(bornettes_id) >= :nbLocations)",nativeQuery = true)
+            "select * from station where station.id in" +
+            " (select station_bornettes.station_id from station_bornettes join bornette on station_bornettes.bornettes_id = bornette.id" +
+            " where bornette.velo_id is null" +
+            " group by station_bornettes.station_id" +
+            " having count(bornette.id)>=:nbLocations)",nativeQuery = true)
     List<Station> getStationLibres(@Param("nbLocations") int nbLocations);
     //select * from station where id IN
     //          (select station_id from station_bornettes
