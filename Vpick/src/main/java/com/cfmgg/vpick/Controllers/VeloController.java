@@ -21,7 +21,7 @@ public class VeloController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value="/bornette/{id}",method = RequestMethod.GET)
-    public List<Velo> getListVeloByBornetteId(@PathVariable("id")Long id){
+    public Velo getListVeloByBornetteId(@PathVariable("id")Long id){
         return veloService.getListVeloByBornetteId(id);
     }
 }
