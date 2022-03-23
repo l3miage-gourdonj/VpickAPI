@@ -11,5 +11,5 @@ import java.util.List;
 public interface VeloRepository extends JpaRepository<Velo, Long> {
 
     @Query("select v from Velo v join Bornette b on b.velo = v where b.id=:id")
-    public Velo getListVeloByBornetteId(Long id);
+    public Velo getVeloByBornetteId(Long id);
 }

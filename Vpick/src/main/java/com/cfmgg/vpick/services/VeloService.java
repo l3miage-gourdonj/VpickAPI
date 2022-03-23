@@ -18,6 +18,6 @@ public class VeloService {
     }
 
     public Velo getListVeloByBornetteId(Long id){
-        return veloRepository.getListVeloByBornetteId(id);
+        return veloRepository.getVeloByBornetteId(id);
     }
 }
