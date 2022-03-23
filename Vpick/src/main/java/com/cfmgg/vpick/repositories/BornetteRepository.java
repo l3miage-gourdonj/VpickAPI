@@ -10,7 +10,5 @@ import java.util.List;
 
 @Repository
 public interface BornetteRepository extends JpaRepository<Bornette,Long> {
-
-    //@Query("select b from Bornette b where b.station= :id and b.velo is null and b.etat = 0")
-    //List<Bornette> getFreeBornette(@Param("id") Long id);
+    Bornette findBornetteById(long id);
 }
