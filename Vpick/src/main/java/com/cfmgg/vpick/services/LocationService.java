@@ -83,4 +83,36 @@ public class LocationService {
     public List<Location> getLocationAbo(String codeSecret,String cb) {
         return locationRepository.getLocationAbo(codeSecret,cb);
     }
+
+    public boolean retourLocation(String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        JSONArray velosHS = null;
+        JSONArray bornettesJson = null;
+        Location location = null;
+        Long idLoc = null;
+        List<Velo> velos = new ArrayList<>();
+        List<Bornette> bornettes = new ArrayList<>();
+        if(jsonObject.has("idlocation")){
+            idLoc = jsonObject.getLong("idlocation");
+            location = locationRepository.getById(idLoc);
+            velos = location.getVelos();
+        }
+        if(jsonObject.has("listeveloHS")){
+            velosHS = jsonObject.getJSONArray("listeveloHS");
+        }
+        if(jsonObject.has("bornettes")){
+            bornettesJson = jsonObject.getJSONArray("bornettes");
+        }
+        for (int i = 0; i < bornettesJson.length(); i++) {
+            bornettes.add(bornetteRepository.findBornetteById(bornettesJson.getLong(i)));
+        }
+        int i =0;
+        for (Velo v: velos) {
+            bornettes.get(i).setVelo(v);
+            i++;
+        }
+
+        bornetteRepository.saveAll(bornettes);
+        return true;
+    }
 }
