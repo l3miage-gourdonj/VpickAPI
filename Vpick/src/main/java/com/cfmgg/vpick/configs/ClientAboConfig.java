@@ -34,7 +34,7 @@ public class ClientAboConfig {
                     new GregorianCalendar(1982, Calendar.FEBRUARY, 11).getTime(),
                     "Rue des poires",
                     Sexe.HOMME,
-                    "12354",
+                    "2354",
                     0,
                     new GregorianCalendar(2018, Calendar.APRIL, 11).getTime(),
                     new GregorianCalendar(2019, Calendar.APRIL, 11).getTime()

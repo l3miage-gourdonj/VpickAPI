@@ -32,15 +32,9 @@ public class StationConfig {
 
             for(Station s: stations){
                 List<Bornette> bornettes = new ArrayList<>();
-                int chanceHs = (int)(Math.random()*(8-1))+1;
-                System.out.println(chanceHs);
-                Etat etat = Etat.OK;
-                if(chanceHs<=1){
-                    etat = Etat.HS;
-                }
                 int random = (int)(Math.random()*(30-5))+5;
                 for(int i = 0;i<random ; i++){
-                    Bornette b = new Bornette(i+1, etat,null);
+                    Bornette b = new Bornette(i+1, Etat.OK,null);
                     bornettes.add(b);
                 }
                 s.setBornettes(bornettes);

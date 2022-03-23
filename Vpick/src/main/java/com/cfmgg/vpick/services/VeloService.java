@@ -17,7 +17,7 @@ public class VeloService {
         this.veloRepository = veloRepository;
     }
 
-    public Velo getListVeloByBornetteId(Long id){
+    public List<Velo> getListVeloByBornetteId(Long id){
         return veloRepository.getListVeloByBornetteId(id);
     }
 }

@@ -18,7 +18,7 @@ public class ClientAboService {
         this.clientAboRepository = clientAboRepository;
     }
 
-    public ClientAbonne isSubscriber(String codeSecret, String carteBancaire){
+    public Client isSubscriber(String codeSecret, String carteBancaire){
         return clientAboRepository.isSubscriber(codeSecret,carteBancaire);
     }
 
