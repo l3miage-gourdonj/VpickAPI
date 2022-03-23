@@ -36,6 +36,7 @@ public class LocationController {
         return locationService.getLocationAbo(codeSecret,cb);
     }
 
+    @CrossOrigin()
     @RequestMapping(value="/retour",method = RequestMethod.POST)
     public @ResponseBody boolean retourLocation(@RequestBody String json){
         return locationService.retourLocation(json);

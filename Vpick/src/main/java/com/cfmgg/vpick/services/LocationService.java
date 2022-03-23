@@ -1,5 +1,6 @@
 package com.cfmgg.vpick.services;
 
+import com.cfmgg.vpick.enums.Etat;
 import com.cfmgg.vpick.models.Bornette;
 import com.cfmgg.vpick.models.Client;
 import com.cfmgg.vpick.models.Location;
@@ -111,7 +112,11 @@ public class LocationService {
             bornettes.get(i).setVelo(v);
             i++;
         }
-
+        for (int j = 0; j < velosHS.length(); j++) {
+            Velo v = veloRepository.getVeloByBornetteId(bornettesJson.getLong(j));
+            v.setEtat(Etat.HS);
+            veloRepository.save(v);
+        }
         bornetteRepository.saveAll(bornettes);
         return true;
     }
