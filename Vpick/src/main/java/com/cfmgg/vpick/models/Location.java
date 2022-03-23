@@ -30,7 +30,7 @@ public class Location {
     @Column(name = "code_secret", updatable = false)
     private String codeSecret;
     @Transient
-    private Float prix;
+    private Double prix;
 
     public Location(List<Velo> velos, Client client, Date dateDebut, Date dateFin, String codeSecret) {
         this.velos = velos;
@@ -40,14 +40,15 @@ public class Location {
         this.codeSecret = codeSecret;
     }
 
-    public Float getPrix(){
-        float prix=0.00F;
+    public Double getPrix(){
+        double prix=0.00;
         if(dateFin!=null){
             for(Velo v : velos){
                 prix+= v.getModele().getCoutHoraire();
             }
-            prix *= Math.round((float)(dateFin.getTime()-dateDebut.getTime())/3600000);
+            prix *= Math.round((double)(dateFin.getTime()-dateDebut.getTime())/3600000);
         }
+        System.out.println(prix);
         return prix;
     }
 }

@@ -61,6 +61,7 @@ public class VeloConfig {
                 bornette.setVelo(velo);
                 bornetteRepository.save(bornette);
             }
+            System.out.println("FIN DES FICHIERS DE CONFIG TU PEUX LANCER");
         };
     }
 
