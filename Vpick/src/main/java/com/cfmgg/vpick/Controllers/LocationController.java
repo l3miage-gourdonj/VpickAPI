@@ -1,5 +1,6 @@
 package com.cfmgg.vpick.Controllers;
 
+import com.cfmgg.vpick.models.Location;
 import com.cfmgg.vpick.services.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,4 +21,11 @@ public class LocationController {
     public @ResponseBody String registerLocation(@RequestBody String json){
         return locationService.registerLocation(json);
     }
+
+    @CrossOrigin(value = "http://localhost:4200/")
+    @RequestMapping(value="/code/{codeSecret}",method = RequestMethod.GET)
+    public Location getLocationNonAbo(@PathVariable("codeSecret") String codeSecret){
+        return locationService.getLocationNonAbo(codeSecret);
+    }
+
 }
