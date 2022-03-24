@@ -117,9 +117,9 @@ public class LocationService {
             v.setEtat(Etat.HS);
             veloRepository.save(v);
         }
-        bornetteRepository.saveAll(bornettes);
         location.setDateFin(new GregorianCalendar().getTime());
         locationRepository.save(location);
+        bornetteRepository.saveAll(bornettes);
         return true;
     }
 }
