@@ -33,7 +33,7 @@ public class ClientAboController {
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/credit", method = RequestMethod.POST)
     public void updateCreditTemps(@RequestBody String client){
-
+        clientAboService.updateCreditTemps(client);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")

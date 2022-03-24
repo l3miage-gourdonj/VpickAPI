@@ -4,6 +4,7 @@ import com.cfmgg.vpick.models.Client;
 import com.cfmgg.vpick.repositories.ClientAboRepository;
 
 import com.cfmgg.vpick.models.ClientAbonne;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,5 +33,21 @@ public class ClientAboService {
 
     public void updateClient(ClientAbonne clientAbo) {
         clientAboRepository.save(clientAbo);
+    }
+
+    public void updateCreditTemps(String client) {
+        JSONObject json = new JSONObject(client);
+        String codeSecret;
+        String cb;
+        int credit;
+        if(json.has("creditsTemps") && json.has("cb") && json.has("code")){
+            codeSecret = json.getString("code");
+            cb = json.getString("cb");
+            credit = json.getInt("creditsTemps");
+            ClientAbonne clientAbo = clientAboRepository.isSubscriber(codeSecret,cb);
+            clientAbo.setCreditTemps(clientAbo.getCreditTemps()+credit);
+            clientAboRepository.save(clientAbo);
+        }
+
     }
 }
