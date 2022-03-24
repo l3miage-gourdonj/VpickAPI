@@ -53,7 +53,7 @@ public class ClientAboController {
             String carteBancaire = json.getString("carteBancaire");
             String dateDebut = json.getString("dateDebut");
             String dateFin = json.getString("dateFin");
-            int creditTemps = Integer.parseInt(json.getString("creditTemps"));
+            int creditTemps = json.getInt("creditTemps");
             Sexe sexe;
             if(sexeString.equals("HOMME")){
                 sexe=Sexe.HOMME;

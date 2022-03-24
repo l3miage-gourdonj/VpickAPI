@@ -6,6 +6,7 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 
@@ -27,7 +28,8 @@ public class ClientAbonne extends Client{
     private String adresse;
 
     private Sexe sexe;
-    @Column(name = "code_secret", unique = true)
+
+    @Column(name = "code_secret")
     private String codeSecret;
 
     @Column(name = "credit_temps")
