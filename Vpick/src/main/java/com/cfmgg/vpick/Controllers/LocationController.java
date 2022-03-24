@@ -18,25 +18,25 @@ public class LocationController {
         this.locationService = locationService;
     }
 
-    @CrossOrigin(value = "http://localhost:4200/")
+    @CrossOrigin(origins = "http://localhost:4200/")
     @PostMapping
     public @ResponseBody String registerLocation(@RequestBody String json){
         return locationService.registerLocation(json);
     }
 
-    @CrossOrigin(value = "http://localhost:4200/")
+    @CrossOrigin(origins = "http://localhost:4200/")
     @RequestMapping(value="/code/{codeSecret}",method = RequestMethod.GET)
     public Location getLocationNonAbo(@PathVariable("codeSecret") String codeSecret){
         return locationService.getLocationNonAbo(codeSecret);
     }
 
-    @CrossOrigin(value = "http://localhost:4200/")
+    @CrossOrigin(origins = "http://localhost:4200/")
     @RequestMapping(value="/cb/{cb}/code/{code}",method = RequestMethod.GET)
     public List<Location>  getLocationAbo(@PathVariable("code") String codeSecret,@PathVariable("cb")String cb){
         return locationService.getLocationAbo(codeSecret,cb);
     }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200/")
     @RequestMapping(value="/retour",method = RequestMethod.POST)
     public @ResponseBody boolean retourLocation(@RequestBody String json){
         return locationService.retourLocation(json);
