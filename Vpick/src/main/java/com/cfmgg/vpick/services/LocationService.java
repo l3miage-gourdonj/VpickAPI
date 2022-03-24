@@ -118,6 +118,8 @@ public class LocationService {
             veloRepository.save(v);
         }
         bornetteRepository.saveAll(bornettes);
+        location.setDateFin(new GregorianCalendar().getTime());
+        locationRepository.save(location);
         return true;
     }
 }
