@@ -54,7 +54,7 @@ public class StationConfig {
                 PlageHoraire p3 = new PlageHoraire(StatusStation.values()[randomStatus],new Date(2022,03,24,12,00),new Date(2022,03,24,17,59));
                 listPlage.add(p3);
                 randomStatus = (int)(Math.random()*(2));
-                PlageHoraire p4 = new PlageHoraire(StatusStation.values()[randomStatus],new Date(2022,03,24,18,00),new Date(2022,03,24,13,59));
+                PlageHoraire p4 = new PlageHoraire(StatusStation.values()[randomStatus],new Date(2022,03,24,18,00),new Date(2022,03,24,23,59));
                 listPlage.add(p4);
                 plageHoraireRepository.saveAll(listPlage);
                 s.setPlagesHoraires(listPlage);

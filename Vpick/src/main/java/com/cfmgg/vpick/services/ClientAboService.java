@@ -25,4 +25,12 @@ public class ClientAboService {
     public void newSubscriber(ClientAbonne client) {
         clientAboRepository.save(client);
     }
+
+    public boolean notSubscribe(String codeSecret, String carteBancaire){
+        return !clientAboRepository.notSubscribe(codeSecret, carteBancaire);
+    }
+
+    public void updateClient(ClientAbonne clientAbo) {
+        clientAboRepository.save(clientAbo);
+    }
 }
