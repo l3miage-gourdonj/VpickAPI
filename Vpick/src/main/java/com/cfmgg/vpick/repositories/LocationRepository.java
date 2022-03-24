@@ -15,6 +15,6 @@ public interface LocationRepository extends JpaRepository<Location,Long> {
     @Query("select l from Location l where l.codeSecret = :code and l.client is null and l.dateFin is null")
     Location getLocationNonAboByCodeSecret(@Param("code") String codeSecret);
 
-    @Query(value=" select l.* from location l where l.code_secret = :code and l.client_id in (select c.id from client c, client_abonne ca  where ca.code_secret = :code and c.carte_bancaire= :cb and ca.date_fin_abonnement>NOW())" , nativeQuery=true)
+    @Query(value=" select l.* from location l where l.code_secret = :code and l.client_id in (select c.id from client c, client_abonne ca  where ca.code_secret = :code and c.carte_bancaire= :cb)" , nativeQuery=true)
     List<Location> getLocationAbo(@Param("code") String codeSecret,@Param("cb") String cb);
 }
