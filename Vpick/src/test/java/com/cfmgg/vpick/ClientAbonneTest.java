@@ -2,16 +2,13 @@ package com.cfmgg.vpick;
 
 import com.cfmgg.vpick.enums.Sexe;
 import com.cfmgg.vpick.models.ClientAbonne;
-import com.cfmgg.vpick.models.Station;
 import com.cfmgg.vpick.repositories.ClientAboRepository;
-import com.cfmgg.vpick.repositories.StationRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
