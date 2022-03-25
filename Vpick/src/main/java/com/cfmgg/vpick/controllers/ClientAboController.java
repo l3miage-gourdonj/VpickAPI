@@ -1,7 +1,6 @@
-package com.cfmgg.vpick.Controllers;
+package com.cfmgg.vpick.controllers;
 
 import com.cfmgg.vpick.enums.Sexe;
-import com.cfmgg.vpick.models.Client;
 import com.cfmgg.vpick.services.ClientAboService;
 import com.cfmgg.vpick.models.ClientAbonne;
 import org.json.JSONObject;

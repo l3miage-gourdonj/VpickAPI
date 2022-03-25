@@ -1,4 +1,4 @@
-package com.cfmgg.vpick.Controllers;
+package com.cfmgg.vpick.controllers;
 
 import com.cfmgg.vpick.models.Location;
 import com.cfmgg.vpick.services.LocationService;

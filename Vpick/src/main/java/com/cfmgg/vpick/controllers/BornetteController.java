@@ -1,11 +1,8 @@
-package com.cfmgg.vpick.Controllers;
+package com.cfmgg.vpick.controllers;
 
-import com.cfmgg.vpick.models.Bornette;
 import com.cfmgg.vpick.services.BornetteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/vpick/bornette")
