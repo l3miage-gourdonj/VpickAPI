@@ -9,8 +9,17 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+/**
+ * Ici on met les requetes lié a une station
+ */
 public interface StationRepository extends JpaRepository<Station, Long> {
 
+    /**
+     * Recupere la liste des stations possedant au moin nbLocation
+     * emplacement de libre afin de ramener une location
+     * @param nbLocations le nombre de location que l'on veux deposer
+     * @return La liste des stations
+     */
     @Query(value =
             "select * from station where station.id in" +
             " (select station_bornettes.station_id from station_bornettes join bornette on station_bornettes.bornettes_id = bornette.id" +
