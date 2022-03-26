@@ -1,16 +1,25 @@
 package com.cfmgg.vpick.models;
 
-import com.cfmgg.vpick.enums.StatusStation;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "station")
+/**
+ * une station possede
+ * une adresse pour pouvoir la localiser
+ * une liste de bornette(tout celle lier a ce parc)
+ * une liste de plage horaire definissant les variations de status
+ * de la station au court de la journée
+ */
 public class Station {
 
     @Id

@@ -9,12 +9,21 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "plage_horaire")
+
+/**
+ * Une plage horaire possede
+ * une heure de debut et de fin
+ * un status de station permettant de savoir si l'utilisateur gagnera des credit temps
+ */
 public class PlageHoraire {
 
     @Id

@@ -4,11 +4,19 @@ import lombok.*;
 
 import javax.persistence.*;
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "modele")
+/**
+ * Un modele possede
+ * un nom
+ * un cout horaire
+ */
 public class Modele {
 
     @Id
