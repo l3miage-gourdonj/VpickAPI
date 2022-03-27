@@ -10,12 +10,25 @@ import javax.persistence.Id;
 import java.util.Date;
 
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
 @Entity
 @DiscriminatorValue("yes")
+/**
+ * Un client abonné renseignera
+ * son nom
+ * son prenom
+ * une date de naissance
+ * une adresse
+ * son sexe
+ * un code secret utiliser pour se connecter
+ * les dates d'abonnement sont automatiques
+ */
 public class ClientAbonne extends Client{
 
     private String nom;

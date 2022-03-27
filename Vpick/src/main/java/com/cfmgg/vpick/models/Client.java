@@ -5,10 +5,16 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Inheritance( strategy = InheritanceType.JOINED )
 @Entity
 @DiscriminatorColumn(name = "abonne")
+/*
+ * un client abonne ou non aura au moin un cb attribuer
+ */
 public abstract class Client {
     @Id
     @GeneratedValue

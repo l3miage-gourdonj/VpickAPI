@@ -6,11 +6,22 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * annotation de lombok reduit le code inutile
+ */
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "location")
+/**
+ * Une location possede
+ * une liste de velo (tout ceux emprumpter au moment de la location)
+ * Un client s'il est abonné afin de lier la location sinon null
+ * une date de debut et de fin
+ * un code secret aleatoire si non abonne sinon celui du client
+ * un prix mais on ne le stock pas on le calcul juste
+ */
 public class Location {
 
     @Id
@@ -39,6 +50,11 @@ public class Location {
         this.dateFin = dateFin;
         this.codeSecret = codeSecret;
     }
+
+    /**
+     * Calcul du prix
+     * @return prix le montant de la location
+     */
 
     public Double getPrix(){
         double prix=0.00;
