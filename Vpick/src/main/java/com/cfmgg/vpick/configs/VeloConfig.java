@@ -43,14 +43,7 @@ public class VeloConfig {
 
 
                 StatusVelo statusVelo = StatusVelo.LIBRE;
-                /*
-                int statusRandom = (int) (Math.random() * ((10) + 1));
-                if (statusRandom == 10) {
-                    statusVelo = StatusVelo.MAINTENANCE;
-                } else if (statusRandom > 5) {
-                    statusVelo = StatusVelo.LOUE;
-                }
-                */
+
                 LocalDate start = LocalDate.of(2015, Month.OCTOBER, 14);
                 LocalDate end = LocalDate.now();
                 LocalDate random = between(start, end);
