@@ -41,6 +41,7 @@ public class VeloConfig {
                 if (etatRandom >= 8)
                     etat = Etat.HS;
 
+
                 StatusVelo statusVelo = StatusVelo.LIBRE;
                 /*
                 int statusRandom = (int) (Math.random() * ((10) + 1));

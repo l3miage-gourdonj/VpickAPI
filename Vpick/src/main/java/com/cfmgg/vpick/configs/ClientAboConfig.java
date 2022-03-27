@@ -18,6 +18,7 @@ public class ClientAboConfig {
     CommandLineRunner commandLineRunnerClientAbo(ClientAboRepository clientAboRepository) {
         return args -> {
             //Créations de clients abonnés
+
             ClientAbonne georges = new ClientAbonne("1234 2345 2345 8793",
                     "Beaux-Art",
                     "Georges",

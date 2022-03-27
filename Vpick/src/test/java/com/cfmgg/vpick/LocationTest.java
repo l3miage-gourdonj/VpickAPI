@@ -54,7 +54,6 @@ public class LocationTest {
         locationRepository.save(location);
         Location locationFound = locationRepository.getLocationNonAboByCodeSecret("55555");
         assertThat(locationFound.getId()).isEqualTo(location.getId());
-
     }
 
     /**
