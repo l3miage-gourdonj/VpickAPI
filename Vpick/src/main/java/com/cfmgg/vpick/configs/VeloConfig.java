@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @Configuration
 public class VeloConfig {
-    /*@Bean
+    @Bean
     CommandLineRunner commandLineRunnerVelo(VeloRepository veloRepository,
                                             ModeleRepository modeleRepository,
                                             BornetteRepository bornetteRepository) {
@@ -50,7 +50,7 @@ public class VeloConfig {
                     statusVelo = StatusVelo.LOUE;
                 }
                 */
-                /* LocalDate start = LocalDate.of(2015, Month.OCTOBER, 14);
+                LocalDate start = LocalDate.of(2015, Month.OCTOBER, 14);
                 LocalDate end = LocalDate.now();
                 LocalDate random = between(start, end);
                 Date date = Date.from(random.atStartOfDay(ZoneId.systemDefault()).toInstant());
@@ -63,7 +63,7 @@ public class VeloConfig {
             }
             System.out.println("FIN DES FICHIERS DE CONFIG TU PEUX LANCER");
         };
-    }*/
+    }
 
     /**
      * Generate a random date

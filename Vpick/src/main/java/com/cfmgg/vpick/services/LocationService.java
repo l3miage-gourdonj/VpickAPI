@@ -35,6 +35,13 @@ public class LocationService {
         this.bornetteRepository = bornetteRepository;
     }
 
+    /**
+     * Transforme les information d'un client et d'un location fournis en json en un object location enregistrer dans la base
+     * update les bornettes concerner pour enlever le velo
+     * et genere un code random qui n'est pas en cours d'utilisation si le client est non abonner
+     * @param json le json contenant les informations
+     * @return le code secret lier a la location
+     */
     public String registerLocation(String json){
         System.out.println("json : "+json);
         String codeLocation = null;
@@ -85,6 +92,15 @@ public class LocationService {
         return locationRepository.getLocationAbo(codeSecret,cb);
     }
 
+
+    /**
+     * Transforme un json contenant les information d'une location afin de pouvoir effectuer le retour d'une location
+     * update des bornettes avec leur nouveau velo
+     * set de la date de fin
+     * update de l'etat des velo
+     * @param json le json recuperer par la requete
+     * @return true
+     */
     public boolean retourLocation(String json) {
         JSONObject jsonObject = new JSONObject(json);
         JSONArray velosHS = null;

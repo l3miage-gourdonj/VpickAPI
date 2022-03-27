@@ -1,6 +1,5 @@
 package com.cfmgg.vpick.services;
 
-import com.cfmgg.vpick.models.Client;
 import com.cfmgg.vpick.repositories.ClientAboRepository;
 
 import com.cfmgg.vpick.models.ClientAbonne;
@@ -35,6 +34,13 @@ public class ClientAboService {
         clientAboRepository.save(clientAbo);
     }
 
+
+    /**
+     * Recupere un json contenant les information d'un client ainsi que son nombre de credit temps
+     * puis update les informations du client s'il existe en remplacant ces credit temps par les nouveaux
+     *
+     * @param client le json contenant les information du client et les credit temps
+     */
     public void updateCreditTemps(String client) {
         JSONObject json = new JSONObject(client);
         String codeSecret;

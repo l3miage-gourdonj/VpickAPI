@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+/**
+ * genere et gere les requetes http que l'on utilise sur le site afin de communiquer avec notre api et notre base de donnée
+ */
 @RequestMapping( "/api/vpick/station")
 public class StationController {
 
