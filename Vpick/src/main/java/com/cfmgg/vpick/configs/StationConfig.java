@@ -18,7 +18,7 @@ import java.util.List;
 
 @Configuration
 public class StationConfig {
-    @Bean
+    /*@Bean
     CommandLineRunner commandLineRunnerStation(StationRepository stationRepository, PlageHoraireRepository plageHoraireRepository) {
         return args -> {
             Station notreDameMusee = new Station("Notre Dame Musée");
@@ -65,5 +65,5 @@ public class StationConfig {
 
             System.out.println("End of StationConfig file");
         };
-    }
+    }*/
 }
