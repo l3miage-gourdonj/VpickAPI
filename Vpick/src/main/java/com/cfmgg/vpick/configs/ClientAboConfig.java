@@ -13,7 +13,7 @@ import java.util.List;
 
 @Configuration
 public class ClientAboConfig {
-    /*
+   
     @Bean
     CommandLineRunner commandLineRunnerClientAbo(ClientAboRepository clientAboRepository) {
         return args -> {
@@ -45,5 +45,5 @@ public class ClientAboConfig {
             clientAboRepository.saveAll(List.of(yves, georges));
             System.out.println("End of ClientConfig file");
         };
-    }*/
+    }
 }
