@@ -10,7 +10,7 @@ import java.util.List;
 
 @Configuration
 public class ModeleConfig {
-    /*@Bean
+    @Bean
     CommandLineRunner commandLineRunnerModele(ModeleRepository modeleRepository) {
         return args -> {
 
@@ -23,5 +23,5 @@ public class ModeleConfig {
             modeleRepository.saveAll(List.of(btwin, scott, rocky, mbk, lapierre));
             System.out.println("End of ModeleConfig file");
         };
-    }*/
+    }
 }
