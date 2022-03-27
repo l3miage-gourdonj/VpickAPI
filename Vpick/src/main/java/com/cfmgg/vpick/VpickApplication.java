@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class VpickApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(new Class[]{VpickApplication.class, ClientAboConfig.class, StationConfig.class, ModeleConfig.class, VeloConfig.class}, args);
+        SpringApplication.run(new Class[]{VpickApplication.class/*, ClientAboConfig.class, StationConfig.class, ModeleConfig.class, VeloConfig.class*/}, args);
     }
 
 

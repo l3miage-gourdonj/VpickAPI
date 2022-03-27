@@ -18,7 +18,7 @@ import java.util.List;
 
 @Configuration
 public class StationConfig {
-    @Bean
+    /*@Bean
     CommandLineRunner commandLineRunnerStation(StationRepository stationRepository, PlageHoraireRepository plageHoraireRepository) {
         return args -> {
 
@@ -66,5 +66,5 @@ public class StationConfig {
 
             System.out.println("End of StationConfig file");
         };
-    }
+    }*/
 }

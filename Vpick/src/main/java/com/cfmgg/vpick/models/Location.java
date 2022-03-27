@@ -62,7 +62,7 @@ public class Location {
             for(Velo v : velos){
                 prix+= v.getModele().getCoutHoraire();
             }
-            prix *= Math.round((double)(dateFin.getTime()-dateDebut.getTime())/3600000);
+            prix *= Math.round((double)(dateFin.getTime()-dateDebut.getTime())/360000);
         }
         System.out.println(prix);
         return prix;
