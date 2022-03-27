@@ -37,7 +37,7 @@ public class LocationTest {
         LocalDate start = LocalDate.of(2015, Month.OCTOBER, 14);
         LocalDate end = LocalDate.now();
         LocalDate random = between(start, end);
-        ClientNonAbonne pierre = new ClientNonAbonne("1234 2345 1234 1223");
+        // pierre = new ClientNonAbonne("1234 2345 1234 1223");
         Date startDate = Date.from(start.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
         Date endDate = Date.from(random.atStartOfDay(ZoneId.systemDefault()).toInstant());
@@ -49,12 +49,11 @@ public class LocationTest {
         Velo velo = new Velo(date, Etat.OK, statusVelo, null);
 
         veloRepository.save(velo);
-        Location location = new Location(List.of(velo), pierre, startDate, endDate, "55555");
+        Location location = new Location(List.of(velo), null, startDate, null, "55555");
 
         locationRepository.save(location);
         Location locationFound = locationRepository.getLocationNonAboByCodeSecret("55555");
         assertThat(locationFound.getId()).isEqualTo(location.getId());
-
     }
 
     /**

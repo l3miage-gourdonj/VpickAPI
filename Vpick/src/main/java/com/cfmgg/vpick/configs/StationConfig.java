@@ -21,6 +21,7 @@ public class StationConfig {
     @Bean
     CommandLineRunner commandLineRunnerStation(StationRepository stationRepository, PlageHoraireRepository plageHoraireRepository) {
         return args -> {
+
             Station notreDameMusee = new Station("Notre Dame Musée");
             Station victorHugo = new Station("Victor Hugo");
             Station gabrielFaure = new Station("Gabriel Fauré");

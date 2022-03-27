@@ -13,6 +13,7 @@ public class ModeleConfig {
     @Bean
     CommandLineRunner commandLineRunnerModele(ModeleRepository modeleRepository) {
         return args -> {
+
             Modele btwin = new Modele("B'TWIN",9.99F);
             Modele scott = new Modele("SCOTT",18.99F);
             Modele rocky = new Modele("Rocky Mountain", 13.99F);
